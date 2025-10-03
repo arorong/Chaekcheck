@@ -10,6 +10,6 @@ public interface UserService {
 	UserVO checkNick(String nick); // 닉네임 중복 확인
 	String pwFind(UserVO vo); //비밀번호 찾기
 	boolean updatePw(String email, String password); //비밀번호 변경
-	
+	int delAcc(String u_email);
 	
 }

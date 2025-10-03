@@ -55,4 +55,10 @@ public class UserServiceImpl implements UserService {
             return false;
         }
 	}
+
+	@Override
+	public int delAcc(String email) {
+		System.out.println("탈퇴Impl");
+		return userDAO.delAccount(email);
+	}
 }

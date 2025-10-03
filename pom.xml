@@ -7,7 +7,7 @@
   <name>chaekcheck</name>
   
 	<properties>
-		<java-version>11</java-version>
+		<java-version>17</java-version>
 		<org.springframework-version>5.3.9</org.springframework-version>
 		<org.aspectj-version>1.9.7</org.aspectj-version>
 		<org.slf4j-version>2.0.0</org.slf4j-version>

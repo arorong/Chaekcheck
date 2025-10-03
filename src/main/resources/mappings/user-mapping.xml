@@ -50,9 +50,10 @@
 		UPDATE C_USER SET U_PW = #{u_pw} WHERE U_EMAIL = #{u_email} AND U_STATUS = 1
 	</update>
 	
-	
-	
-	
+	<!--회원 계정 삭제 -->
+	<update id="delAccount">
+		UPDATE C_USER SET U_STATUS = '0' WHERE U_EMAIL=#{u_email}
+	</update>	
 	
 	
 	

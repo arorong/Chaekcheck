@@ -58,6 +58,11 @@ public class UserDAO {
 	        params.put("u_pw", encodedPassword);   // XML의 #{u_pw}와 일치
 	        return mybatis.update("UserDAO.updatePw", params);
 	    }
+	 
+	 //회원 탈퇴
+	 public int delAccount(String email) {
+		 return mybatis.update("UserDAO.delAccount", email);
+	 }
 	
 
 }

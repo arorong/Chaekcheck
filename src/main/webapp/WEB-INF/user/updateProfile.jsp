@@ -89,7 +89,7 @@
 	      			<p class="content">4. 아래 본인 확인 후 탈퇴하기를 누르시면 위 내용에 동의하는 것으로 간주됩니다.</p>
 	      		</div>
 	      		<div class="identifyMem">
-			        <form class="delAccount-modal" id="delForm" novalidate>
+			        <form class="delAccount-modal" id="delAccount" action="deleteMember.log" novalidate>
 			          <div>
 			      	    <h6>본인 확인</h6>
 			          	<p>본인 확인을 위해 비밀번호를 입력해주세요</p>
@@ -110,9 +110,28 @@
 	      </div>
 	    </div>
 	  	</div>
-	</div>
-	
-	
-	
+	</div>	
 </body>
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		//특정 입력 필드 가져오기
+		var inputField = document.getElementById("delAccount");
+		if (!inputField) return; //요소값이 없으면 바로 종료
+		
+		//입력 필드에 포커스 될 때 엔터키 이벤트 처리
+		inputField.addEventListener("keydown", function(e){
+			if(e.key === "Enter"){
+				e.preventDefault(); //기본 submit 막기(중복 방지)
+				document.getElementByID(delAccount).submit();
+			}
+		})
+	});
+		
+</script>
+
+
+
+
+
+
 </html>

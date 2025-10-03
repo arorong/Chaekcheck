@@ -335,8 +335,8 @@
 }
 	
 	//Enter 키 이벤트
-	$("#u_email, #u_pw").on("keyup", function(e) {
-	    if (e.key === "Enter" || e.keyCode === 13) {
+	$("#u_email, #u_pw").on("keydown", function(e) {
+	    if (e.key === "Enter") {
 	        loginBtn(); // 로그인 실행
 	    }
 	});
